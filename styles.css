@@ -1,0 +1,26 @@
+h1 {
+    font-family: 'Lora', serif;
+}
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.navbar {
+    background-color: mediumaquamarine;
+}
+
+#title {
+    color: #693311;
+}
+
+#title2 {
+    color: #ffc0d1;
+}
+
+.jumbotron {
+    margin: 0;
+    padding: 30px;
+    background-color:  #00b6b0;
+}

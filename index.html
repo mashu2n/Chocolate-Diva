@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---links-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="https://kit.fontawesome.com/940dd0acf1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Raleway:ital,wght@1,200&display=swap" />
+
+    <link rel="stylesheet" href="styles.css"/>
+
+    <title>Chocolate Divas</title>
+</head>
+<body>
+
+    <!--Header-->
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 id="title">CHOCOLATE DIVA</h1>
+                    <h4 id="title2">Let them know how you like your chocolate.</h6>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Home</a>
+    
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Services</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+        <!--Button Trigger Modal-->
+        <div id="placeOrder">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#orderModal">Place an Order</button>
+        </div>
+
+        <!--Modal-->
+        <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Name</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <!--Form within Modal-->
+                    <form>
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="First name">
+                          </div>
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="Last name">
+                          </div>
+                        </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </nav>
+    <footer>
+        
+    </footer>
+     <!-- build:js js/main.js -->
+     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="js/scripts.js"></script>
+
+     <script>$('#orderModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+      })</script>
+</body>
+</html>
