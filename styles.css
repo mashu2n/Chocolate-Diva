@@ -1,9 +1,11 @@
-h1 {
-    font-family: 'Lora', serif;
+#title1 {
+    color: #693311;
+    font-family: rock salt, serif;
 }
 
-h4 {
-    font-family: 'Raleway', sans-serif;
+#title2 {
+    color: #ffc0d1;
+    font-family: cookie, serif;
 }
 
 
@@ -11,13 +13,6 @@ h4 {
     background-color: mediumaquamarine;
 }
 
-#title {
-    color: #693311;
-}
-
-#title2 {
-    color: #ffc0d1;
-}
 
 .jumbotron {
     margin: 0;
@@ -59,21 +54,22 @@ body, html {
     color: white;
     font-weight: bold;
     font-size: 80px;
-    border: 10px solid #f1f1f1;
+    border: 10px solid mediumaquamarine;
     position: fixed; /* Stay fixed */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 300px;
-    padding: 20px;
+    padding: 20px 10px;
     text-align: center;
   }
 
   
   
   .carousel {
-    border: solid black; }
+    border: solid black; 
+  }
   
     #bottom {
       background-color: #00b6b0;
