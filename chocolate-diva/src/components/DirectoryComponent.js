@@ -1,76 +1,43 @@
 import React, { Component } from 'react';
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class Directory extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items:[
-                {
-                    id:0,
-                    foodItem: "chocolate covered strawberries and cheese cake bites",
-                    image: "Assets/images/choc-gift1.webp",
-                    price: "$35"
-                },
-                {
-                    id:1,
-                    foodItem: "chocolate covered marshmallow bars",
-                    image: "Assets/images/choc-gift2.webp",
-                    price: "$10"
-                },
-                {
-                    id:2,
-                    foodItem: "chocolate covered party favor treats",
-                    image: "Assets/images/choc-gift3.webp",
-                    price: "$45"
-                },
-                {
-                    id:3,
-                    foodItem: "chocolate covered pretzels",
-                    image: "Assets/images/choc-gift4.webp",
-                    price: "$13"
-                },
-                {
-                    id:4,
-                    foodItem: "chocolate covered gift set",
-                    image: "Assets/images/choc-gift5.webp",
-                    price: "$30"
-                },
-                {
-                    id:5,
-                    foodItem: "chocolate covered donut and cake pops assortment",
-                    image: "Assets/images/choc-gift6.webp",
-                    price: "$40"
-                },
-                {
-                    id:6,
-                    foodItem: "chocolate covered peppers",
-                    image: "Assets/images/choc-gift7.webp",
-                    price: "$20"
-                },
-                {
-                    id:7,
-                    foodItem: "chocolate covered assorted fruit tray",
-                    image: "Assets/images/choc-gift8.webp",
-                    price: "$50"
-                },
-                {
-                    id:8,
-                    foodItem: "chocolate covered birthday treats",
-                    image: "Assets/images/choc-gift9.webp",
-                    price: "$35"
-                },
-            ]
-            
+            SelectedItem: null  
         };
     }
 
-    render() {
-        const directory = this.state.items.map(item => {
+    onItemSelect(item) {
+        this.setState({SelectedItem: item})
+    }
+
+    renderSelectedItem(item) {
+        if(item) {
             return (
-                <div key={item.id} className="col">
-                    <img src={item.image} alt={item.foodItem} />
-                    <h2>{item.foodItem}</h2>
-                    <p>{item.price}</p>
+                <Card>
+                    <CardImg top src={item.image} alt={item.foodItem} />
+                    <CardBody>
+                        <CardTitle>{item.foodItem}</CardTitle>
+                        <CardText>{item.foodItem}</CardText>
+                    </CardBody>
+                </Card>
+            );
+        }
+        return <div />;
+    }
+
+    render() {
+        const directory = this.props.items.map(item => {
+            return (
+                <div key={item.id} className="col-md-4 m-1">
+                    <Card onClick ={() => this.onItemSelect(item)}>
+                        <CardImg width="100%" src={item.image} alt={item.foodItem} />
+                        <CardImgOverlay>
+                            <CardTitle>{item.foodItem}</CardTitle>
+                        </CardImgOverlay>
+                    </Card>
                 </div>
             )
         })
@@ -78,6 +45,11 @@ class Directory extends Component {
             <div className="container">
                 <div className="row">
                     {directory}
+                </div>
+                <div className="row">
+                    <div className="col-md-4 m-1">
+                        {this.renderSelectedItem(this.state.SelectedItem)}
+                    </div>
                 </div>
             </div>
         );
