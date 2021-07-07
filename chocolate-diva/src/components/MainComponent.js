@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Directory from './DirectoryComponent';
 import { ITEMS } from '../shared/items';
+import ItemInfo from './ItemInfoComponent';
 import Header from './HeaderComponent'
 
 class Main extends Component {
@@ -19,6 +21,8 @@ class Main extends Component {
         return (
             <div>
                 <Header />
+                <Directory items={this.state.items} onClick={itemId => this.onItemSelect(itemId)}/>
+                <ItemInfo item={this.state.items.filter(item => item.id === this.state.selectedItem)[0]} />
             </div>
         );
     };
