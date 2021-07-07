@@ -53,7 +53,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,Jum
     
                     <Navbar dark sticky="top" expand="md">
                         <div className="container">
-                            <NavbarBrand className="mr-auto" href="/"><img src="" height="30" width="30" alt="" /></NavbarBrand>
+                            <NavbarBrand className="mr-auto" href=""><img src="Assets/images/hot-choc-logo.png" height="40" width="40" alt="" /></NavbarBrand>
                             <NavbarToggler onClick={this.toggleNav} />
                             <Collapse isOpen={this.state.isNavOpen} navbar>
                                 <Nav navbar>
@@ -68,7 +68,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,Jum
                                         </NavLink>
                                     </NavItem>
                                     <NavItem>
-                                        <NavLink className="nav-link" to="/directory">
+                                        <NavLink className="nav-link" to="/shop">
                                             <i className="fa fa-cart fa-lg" /> Shop
                                         </NavLink>
                                     </NavItem>
