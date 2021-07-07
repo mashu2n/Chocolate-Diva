@@ -3,7 +3,7 @@ body {
 }
 
 .card-title {
-  font: 500 1.25rem "Cookie", cursive;
+  font: 500 1.35rem "Cookie", cursive;
 }
 
 .card-img-overlay .card-title {
@@ -13,4 +13,20 @@ body {
 
 .navbar {
   background-color: mediumaquamarine;
+}
+
+h1 {
+  color: #693311;
+  font-family: rock salt, serif;
+}
+
+h2 {
+  color: #ffc0d1;
+  font-family: cookie, serif;
+}
+
+.jumbotron {
+  margin: 0;
+  padding: 30px;
+  background-color: #00b6b0;
 }
